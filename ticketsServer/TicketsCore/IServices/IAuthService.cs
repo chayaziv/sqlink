@@ -9,7 +9,7 @@ namespace TicketsCore.IServices
 {
     public interface IAuthService
     {
-        Task<Result<AuthData>> RegisterUserAsync(RegisterModel model);
-        Task<Result<AuthData>> LoginAsync(LoginModel model);
+        // Task<Result<AuthData>> RegisterUserAsync(RegisterModel model);
+        // Task<Result<AuthData>> LoginAsync(LoginModel model);
     }
 }

@@ -20,8 +20,8 @@ namespace TicketsData
 
        
 
-           readonly string _filePath = "C:\\Users\\hitmachut\\Desktop\\SQLINK\\ticketsServer\\TicketsData\\jsonFile";
-      
+           readonly string _filePath = Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, @"..\..\..\..\TicketsData\jsonFile"));
+
         public DataContext()
         {
         }

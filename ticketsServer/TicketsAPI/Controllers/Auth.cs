@@ -9,38 +9,38 @@ namespace TicketsAPI.Controllers
     {
 
 
-        private readonly IAuthService _authService;
+        // private readonly IAuthService _authService;
 
-        public AuthController(IAuthService authService)
-        {
-            _authService = authService;
-        }
-
-
-        [HttpPost("register")]
-        public async Task<IActionResult> Register([FromBody] RegisterModel model)
-        {
-            var result = await _authService.RegisterUserAsync(model);
-
-            if (!result.IsSuccess)
-            {
-
-                return StatusCode(result.StatusCode, new { messege = result.ErrorMessage });
-            }
-
-            return StatusCode(result.StatusCode, new { data = result.Data, messege = "User registered successfully" });
-        }
+        // public AuthController(IAuthService authService)
+        // {
+        //     _authService = authService;
+        // }
 
 
-        [HttpPost("login")]
-        public async Task<IActionResult> Login([FromBody] LoginModel model)
-        {
-            var result = await _authService.LoginAsync(model);
+        // [HttpPost("register")]
+        // public async Task<IActionResult> Register([FromBody] RegisterModel model)
+        // {
+        //     var result = await _authService.RegisterUserAsync(model);
 
-            if (!result.IsSuccess)
-                return StatusCode(result.StatusCode, new { messege = result.ErrorMessage });
+        //     if (!result.IsSuccess)
+        //     {
 
-            return StatusCode(result.StatusCode, new { data = result.Data, messege = "User logined successfully" });
-        }
+        //         return StatusCode(result.StatusCode, new { messege = result.ErrorMessage });
+        //     }
+
+        //     return StatusCode(result.StatusCode, new { data = result.Data, messege = "User registered successfully" });
+        // }
+
+
+        // [HttpPost("login")]
+        // public async Task<IActionResult> Login([FromBody] LoginModel model)
+        // {
+        //     var result = await _authService.LoginAsync(model);
+
+        //     if (!result.IsSuccess)
+        //         return StatusCode(result.StatusCode, new { messege = result.ErrorMessage });
+
+        //     return StatusCode(result.StatusCode, new { data = result.Data, messege = "User logined successfully" });
+        // }
     }
 }
