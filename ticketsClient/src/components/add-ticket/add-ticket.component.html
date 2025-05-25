@@ -1,0 +1,60 @@
+<p>add-ticket works!</p>
+
+
+<div class="overlay">
+    <div class="form-container">
+     
+      <form [formGroup]="ticketForm" (ngSubmit)="onSubmit()">
+        <mat-form-field appearance="fill">
+          <mat-label>fullname</mat-label>
+          <input matInput formControlName="fullname" />
+          @if(ticketForm.get('fullname')?.invalid
+          &&ticketForm.get('fullname')?.touched){
+          <mat-error> fullname is required. </mat-error>
+          }
+        </mat-form-field>
+  
+
+        <mat-form-field appearance="fill">
+            <mat-label>email</mat-label>
+            <input matInput formControlName="email" />
+            @if(ticketForm.get('email')?.invalid
+            &&ticketForm.get('email')?.touched){
+            <mat-error> email is required. </mat-error>
+            }
+          </mat-form-field>
+
+
+          <mat-form-field appearance="fill">
+            <mat-label>description</mat-label>
+            <input matInput formControlName="description" />
+            @if(ticketForm.get('description')?.invalid
+            &&ticketForm.get('description')?.touched){
+            <mat-error> description is required. </mat-error>
+            }
+          </mat-form-field>
+
+          <mat-form-field appearance="fill">
+            <mat-label>imageUrl</mat-label>
+            <input matInput formControlName="imageUrl" />
+            @if(ticketForm.get('imageUrl')?.invalid
+            &&ticketForm.get('imageUrl')?.touched){
+            <mat-error> imageUrl is required. </mat-error>
+            }
+          </mat-form-field>
+       
+  
+        <div class="actions">
+          <button
+            mat-raised-button
+            color="'primary'"
+            type="submit"
+           
+          >
+            Add Ticket
+          </button>
+        
+        </div>
+      </form>
+    </div>
+  </div>

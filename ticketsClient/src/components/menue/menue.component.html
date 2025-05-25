@@ -1,0 +1,61 @@
+<p>menue works!</p>
+
+
+<mat-toolbar class="menu">
+    
+    <div class="menu-items">
+      
+
+
+
+        <ng-container >
+            <button  mat-raised-button routerLink="/admin-tickets" class="menu-item">
+              <mat-icon>group</mat-icon>
+              <span>Admin Tickets</span>
+            </button>
+            <button  mat-raised-button routerLink="/add-ticket" class="menu-item">
+              <mat-icon>dashboard</mat-icon>
+              <span>Add tickets</span>
+            </button>
+
+            <button  mat-raised-button routerLink="/view-ticket" class="menu-item">
+                <mat-icon>dashboard</mat-icon>
+                <span>View Ticket</span>
+              </button>
+            <!-- <button  mat-raised-button (click)="logout()" class="menu-item">
+              <mat-icon>exit_to_app</mat-icon>
+              <span>Logout</span>
+            </button> -->
+          </ng-container>
+
+
+
+
+      <!-- @if (isAuth) {
+        <ng-container >
+          <button  mat-raised-button routerLink="/admin-tickets" class="menu-item">
+            <mat-icon>group</mat-icon>
+            <span>Tickets</span>
+          </button>
+          <button  mat-raised-button routerLink="/add-ticket" class="menu-item">
+            <mat-icon>dashboard</mat-icon>
+            <span>Add tickets</span>
+          </button>
+          <button  mat-raised-button (click)="logout()" class="menu-item">
+            <mat-icon>exit_to_app</mat-icon>
+            <span>Logout</span>
+          </button>
+        </ng-container>
+      } -->
+  
+      <!-- @if(!isAuth) {
+        <ng-container >
+          <button  mat-raised-button routerLink="/login" class="menu-item">
+            <mat-icon>login</mat-icon>
+            <span>Login</span>
+          </button>
+        </ng-container>
+      } -->
+      
+    </div>
+  </mat-toolbar>

@@ -1,0 +1,18 @@
+{
+   
+    "db": [
+        {
+            "statusId": 1,
+            "name": "New"
+        },
+        {
+            "statusId": 2,
+            "name": "In Progress"
+        },
+        {
+            "statusId": 3,
+            "name": "Closed"
+        }
+    ]
+   
+}

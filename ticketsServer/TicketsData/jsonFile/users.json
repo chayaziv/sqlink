@@ -1,0 +1,11 @@
+{
+    "db": [
+        {
+            "userId": 1,
+            "fullName": "Admin User",
+            "email": "admin@example.com",
+            "password": "1234!@#"
+        }
+    ]
+   
+}
